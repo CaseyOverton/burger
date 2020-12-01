@@ -83,20 +83,20 @@ body {
 
 
 .webdesigntuts-workshop input {
-	background: #222;	
+	background: rgb(126, 56, 56);	
 	background: linear-gradient(#333, #222);	
 	border: 1px solid #444;
-	border-radius: 5px 0 0 5px;
+	border-radius: 5px ;
 	box-shadow: 0 2px 0 #000;
 	color: #888;
 	display: block;
-	float: left;
+	
 	font-family: 'Nerko One', cursive;
-	font-size: 13px;
+	font-size: 20px;
 	font-weight: 400;
 	height: 40px;
-	margin: 0;
-	padding: 0 10px;
+	/* margin: 0;
+	padding: 0 10px; */
 	text-shadow: 0 -1px 0 #000;
 	width: 200px;
 }
@@ -140,15 +140,15 @@ body {
 	border-radius: 0 5px 5px 0;
 	box-shadow: 0 2px 0 #000;
 	color: #fff;
-	display: block;
-	float: left;
+	
+
 	font-family: 'Nerko One', cursive;
-	font-size: 13px;
+	font-size: 17px;
 	font-weight: 400;
 	height: 40px;
 	line-height: 40px;
-	margin: 0;
-	padding: 0;
+	 margin: 1px;
+	padding: 0; */
 	position: relative;
 	text-shadow: 0 -1px 0 #000;
 	width: 80px;
