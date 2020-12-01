@@ -1,0 +1,64 @@
+.navbar {
+    background-color: rgb(187, 39, 76);
+    color: black;
+    font-family: 'Nerko One', cursive;
+}
+body {
+    background-color: cadetblue;
+    
+
+}
+.header {
+    text-align: right;
+    font-family: 'Nerko One', cursive;
+    font-size: 75px;
+    margin-right: 5%;
+}
+.margin {
+    margin: 20%;
+  
+}
+.leftSide {
+    font-family: 'Nerko One', cursive;
+    background-color: thistle;
+    margin-left: 2%;
+    text-align: left;
+   text-align: center;
+    min-height: 700px;
+    border-radius: 25px;
+    padding: 5%;
+    box-shadow: 5px 5px 8px rgb(201, 4, 4), 10px 10px 8px rgb(255, 0, 85), 15px 15px 8px rgb(255, 187, 0);
+    width: 25%;
+    float: left;
+}
+.middle {
+    font-family: 'Nerko One', cursive;
+    background-color: thistle;
+    
+    margin-left: 35%;
+ margin-top: 5%;
+    text-align: center;
+    min-height: 700px;
+    border-radius: 25px;
+    padding: 2%;
+    width: 220px;
+    box-shadow: 5px 5px 8px rgb(201, 4, 4), 10px 10px 8px rgb(255, 0, 85), 15px 15px 8px rgb(255, 187, 0);
+
+}
+.right {
+    font-family: 'Nerko One', cursive;
+    background-color: thistle;
+    
+    margin-left: 63%;
+ margin-top: 8%;
+    text-align: center;
+    min-height: 700px;
+    border-radius: 25px;
+    padding: 2%;
+    width: 30%;
+
+    
+    
+    box-shadow: 5px 5px 8px rgb(201, 4, 4), 10px 10px 8px rgb(255, 0, 85), 15px 15px 8px rgb(255, 187, 0);
+
+}
