@@ -1,1 +1,1 @@
-# burger
+This website provides users with the hottest burgers around! Enter in a burger and DEVOUR it just like that! The website is configured through a series of files inclufing a database, orm, and some nifty npm packages! Enjoy! 
