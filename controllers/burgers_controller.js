@@ -1,5 +1,5 @@
 const path = require("path");
-burger = require("../models/burger");
+burger = require("../models/burger.js");
 
 module.exports = function(app) {
 	app.get("/", function(req, res) {
