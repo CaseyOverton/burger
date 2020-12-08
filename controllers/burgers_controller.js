@@ -7,11 +7,11 @@ module.exports = function(app) {
 			res.render(path.join(__dirname, "../views/index"), {burgers:burgers});
 		});
 	});
-	app.get("/burgers", function(req, res) {
-		burger.getBurgers(function(burgers) {
-			res.json(burgers);
-		});
-	});
+	// app.get("/burgers", function(req, res) {
+	// 	burger.getBurgers(function(burgers) {
+	// 		res.json(burgers);
+	// 	});
+	// });
 	app.post("/burger/add", function(req, res) {
 		burger.addBurger(req.body.burger_name, function(burgers) {
 			res.redirect('/');
