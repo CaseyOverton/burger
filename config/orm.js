@@ -1,4 +1,4 @@
-const connection = require("../config/connection");
+const connection = require("../config/connection.js");
 
 
 function printQuestionMarks(num) {
@@ -43,8 +43,8 @@ const orm = {
 			if (err) { throw err; }
 			if (!!cb) { cb(result); }
 		});		
-	}
-	, updateOne: (table, updates, condition, cb) => {
+  },
+   updateOne: (table, updates, condition, cb) => {
 		let queryString = "UPDATE " + table;
 		queryString += " SET ";
 		queryString += objToSql(updates);
