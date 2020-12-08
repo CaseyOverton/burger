@@ -1,60 +1,64 @@
-<ul>
-  {{#each quotes}}
-  	<li>
-  		<p><span class="label">Burger</span> {{id}}</p>
-      <p><span class="label">Quote:</span> {{this.quote}}</p>
-      <p><span class="label">Author:</span> {{this.author}}</p>
 
-      <button data-id="{{this.id}}" class="devour">Devour!</button>
+ <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">EatdaBurger</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Burger List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-      <a href="/{{this.id}}">Update this quote</a>
-  	</li>
-  {{/each}}
-</ul>
+      {{!-- HEADER  --}}
+    <h1 class='header'>BurgersNow</h1>
 
-
-
-
-
-
-<h1>Cats!</h1>
-
-<h2>Cats that are not sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
+    <div class="container">
+     <div class='leftSide'>
+{{!-- SECTION 1 INPUT  --}}
+<form id="formAddBurger" method="post" action="/burger/add">
+<h1>Submit Burger</h1>
+	<input type="text" name="burger_name" />
+	<input type="submit" value="Add Burger!" />
 </form>
 
+           
+{{!-- SECTION 2 --}}
+        <div class='middle'>
+          <div id="burgers" class="burgers">
+          	<h3>Live Orders!</h3>
+            	{{#each burgers}}
+	            	{{#unless devoured}}
+	            		<div id='burger_{{id}}' class='burger'>
+		            		<button id='button_{{id}}' onclick='devourBurger({{id}});'>Eat Me!</button>
+		            		<label id='label_{{id}}'>{{burger_name}}</label>
+			            </div>
+	            	{{/unless}}
+            	{{/each}}
+          </div>
 
-<button class='burgerAdd' data-id='{{id}}'
+
+
+             {{!-- THIRD SECTION --}}
+        <div class='right'> 
+            <h1>Devoured!</h1>
+        </div>
+<script>
+function devourBurger(b) {
+	$("#burger_"+b).addClass("devoured");
+	$("#button_"+b).remove();
+	$("#devoured").append($("#burger_"+b));
+	$.post( "/burger/eat/"+b, function( data ) {
+	  $( ".result" ).html( data );
+	});
+}
+</script>

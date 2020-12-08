@@ -12,10 +12,6 @@ body {
     font-size: 75px;
     margin-right: 5%;
 }
-.margin {
-   
-  
-}
 .leftSide {
     font-family: 'Nerko One', cursive;
     background-color: thistle;
@@ -148,7 +144,7 @@ body {
 	height: 40px;
 	line-height: 40px;
 	 margin: 1px;
-	padding: 0; */
+	padding: 0; 
 	position: relative;
 	text-shadow: 0 -1px 0 #000;
 	width: 80px;
