@@ -6,7 +6,7 @@ USE burgers_db;
 
 CREATE TABLE burgers (
   
-    id INT AUTO_INCRIMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     burger_name VARCHAR(15),
-    devoured bit
+    devoured boolean
 );
